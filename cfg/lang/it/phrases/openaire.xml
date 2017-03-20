@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE phrases SYSTEM "entities.dtd">
+<epp:phrases xmlns="http://www.w3.org/1999/xhtml" xmlns:epp="http://eprints.org/ep3/phrase" xmlns:epc="http://eprints.org/ep3/control">
+
+
+<!-- Eprint fields -->
+
+<epp:phrase id="metapage_title_fp7">Progetti con finanziamento europeo: FP7, H2020</epp:phrase>
+
+<epp:phrase id="eprint_fieldname_fp7_project">Risultato di un progetto con finanziamento europeo?</epp:phrase>
+<epp:phrase id="eprint_fieldhelp_fp7_project">Questo item è il risultato di un progetto finanziato dall'EU?</epp:phrase>
+<epp:phrase id="eprint_fieldopt_fp7_project_yes">Si</epp:phrase>
+<epp:phrase id="eprint_fieldopt_fp7_project_no">No</epp:phrase>
+
+<epp:phrase id="eprint_fieldname_fp7_project_fundingprogramme">Programma di Finanziamento</epp:phrase>
+<epp:phrase id="eprint_fieldhelp_fp7_project_fundingprogramme">Campo obbligatorio. Scegliere il progrramma di finanziamento: FP7 o H2020</epp:phrase>
+
+<epp:phrase id="eprint_fieldname_fp7_project_id">Numero identificativo del progetto</epp:phrase>
+<epp:phrase id="eprint_fieldhelp_fp7_project_id">Campo obbligatorio. Solo numeri: 12345</epp:phrase>
+
+<epp:phrase id="eprint_fieldname_fp7_project_name">Nome del Progetto</epp:phrase>
+<epp:phrase id="eprint_fieldhelp_fp7_project_name">Campo NON obbligatorio. Nome esteso del progetto. Usare solo lettere e numeri, non usare simboli (/,',",# etc..) o parentesi. Ammessi gli spazi bianchi.</epp:phrase>
+
+<epp:phrase id="eprint_fieldname_fp7_project_acronym">Acronimo del progetto</epp:phrase>
+<epp:phrase id="eprint_fieldhelp_fp7_project_acronym">Campo obbligatorio. Acronimo del progetto.</epp:phrase>
+
+<epp:phrase id="eprint_fieldname_fp7_type">Tipo di pubblicazione</epp:phrase>
+<epp:phrase id="eprint_fieldhelp_fp7_type">Campo obbligatiorio. Selezionare il tipo di pubblicazione tra quelle ammesse dai progetti UE</epp:phrase>
+<epp:phrase id="eprint_fieldopt_fp7_type_info:eu-repo/semantics/article">Articolo</epp:phrase>
+<epp:phrase id="eprint_fieldopt_fp7_type_info:eu-repo/semantics/bachelorThesis">Tesi (laurea)</epp:phrase>
+<epp:phrase id="eprint_fieldopt_fp7_type_info:eu-repo/semantics/masterThesis">Tesi (Master)</epp:phrase>
+<epp:phrase id="eprint_fieldopt_fp7_type_info:eu-repo/semantics/doctoralThesis">Tesi (Dottorato)</epp:phrase>
+<epp:phrase id="eprint_fieldopt_fp7_type_info:eu-repo/semantics/book">Libro</epp:phrase>
+<epp:phrase id="eprint_fieldopt_fp7_type_info:eu-repo/semantics/bookPart">Parte di libro</epp:phrase>
+<epp:phrase id="eprint_fieldopt_fp7_type_info:eu-repo/semantics/review">Review</epp:phrase>
+<epp:phrase id="eprint_fieldopt_fp7_type_info:eu-repo/semantics/conferenceObject">Conference Object</epp:phrase>
+<epp:phrase id="eprint_fieldopt_fp7_type_info:eu-repo/semantics/lecture">Lecture</epp:phrase>
+<epp:phrase id="eprint_fieldopt_fp7_type_info:eu-repo/semantics/workingPaper">Working Paper</epp:phrase>
+<epp:phrase id="eprint_fieldopt_fp7_type_info:eu-repo/semantics/preprint">Preprint</epp:phrase>
+<epp:phrase id="eprint_fieldopt_fp7_type_info:eu-repo/semantics/report">Report</epp:phrase>
+<epp:phrase id="eprint_fieldopt_fp7_type_info:eu-repo/semantics/annotation">Annotation</epp:phrase>
+<epp:phrase id="eprint_fieldopt_fp7_type_info:eu-repo/semantics/contributionToPeriodical">Contribution to Periodical</epp:phrase>
+<epp:phrase id="eprint_fieldopt_fp7_type_info:eu-repo/semantics/patent">Brevetto</epp:phrase>
+<epp:phrase id="eprint_fieldopt_fp7_type_info:eu-repo/semantics/other">Altri</epp:phrase>
+
+<epp:phrase id="eprint_fieldname_access_rights">Diritti di accesso</epp:phrase>
+<epp:phrase id="eprint_fieldhelp_access_rights">Campo obbligatorio. Disponiblità della risorsa.</epp:phrase>
+<epp:phrase id="eprint_fieldopt_access_rights_info:eu-repo/semantics/openAccess">Accesso aperto</epp:phrase>
+<epp:phrase id="eprint_fieldopt_access_rights_info:eu-repo/semantics/closedAccess">Accesso chiuso</epp:phrase>
+<epp:phrase id="eprint_fieldopt_access_rights_info:eu-repo/semantics/embargoedAccess">Sottomesso a embrago</epp:phrase>
+<epp:phrase id="eprint_fieldopt_access_rights_info:eu-repo/semantics/restrictedAccess">Accesso ristretto</epp:phrase>
+
+</epp:phrases>
