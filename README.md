@@ -79,13 +79,15 @@ In file cfg/workflows/eprint/default.xml add the following lines before the clos
 
 ```html
 <stage name="openaire">
-	<title>Details for EU project outputs</title>`
-	<field ref="fp7_project"/>
-	<field ref="fp7_project_fundingprogramme"/>
-	<field ref="fp7_project_id"/>
-	<field ref="fp7_project_name"/>
-	<field ref="fp7_project_acronym"/>
-	<field ref="access_rights"/>
+	<component type="Field::Multi">
+		<title>Details for EU project outputs</title>`
+		<field ref="fp7_project"/>
+		<field ref="fp7_project_fundingprogramme"/>
+		<field ref="fp7_project_id"/>
+		<field ref="fp7_project_name"/>
+		<field ref="fp7_project_acronym"/>
+		<field ref="access_rights"/>
+	</component>
 </stage>
 ```
 
