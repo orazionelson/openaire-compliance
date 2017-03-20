@@ -77,30 +77,33 @@ In file cfg/cfg.d/eprint_fields_automatic.pl add the following lines:
 
 In file cfg/workflows/eprint/default.xml add the following lines before the closing </workflow> tag:
 
-
-  <stage name="fp7">
-    <component type="Field::Multi">
-      <title>Details for FP7 project outputs</title>
-      <field ref="fp7_project"/>
-      <field ref="fp7_project_id"/>
-      <field ref="access_rights"/>
-    </component>
-  </stage>
-
+```html
+<stage name="openaire">
+	<title>Details for EU project outputs</title>`
+	<field ref="fp7_project"/>
+	<field ref="fp7_project_fundingprogramme"/>
+	<field ref="fp7_project_id"/>
+	<field ref="fp7_project_name"/>
+	<field ref="fp7_project_acronym"/>
+	<field ref="access_rights"/>
+</stage>
+```
 
 And add the following line to the <flow> element (near the start of the file) to place the new FP7 stage where you feelit will be most appropriate for your workflow:
-
-    <stage ref="fp7"/>
+	
+	<stage ref="openaire"/>
 
 e.g.:
 
+```html
   <flow>
     <stage ref="type"/>
     <stage ref="files"/>
     <stage ref="core"/>
     <stage ref="subjects"/>
-    <stage ref="fp7"/>
+    <stage ref="openaire"/>
   </flow>
+```
 
 Restart apache to ensure that all the changes are applied.
 
