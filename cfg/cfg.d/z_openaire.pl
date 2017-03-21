@@ -4,8 +4,8 @@
 	    'name' => 'fp7_project',
 		'type' => 'set',
 		'options' => [
-			   'yes',
-			   'no'
+			   'no',
+			   'yes'
 			 ],
 		'input_style' => 'radio',
 	},

@@ -74,14 +74,17 @@ In file cfg/cfg.d/eprint_fields_automatic.pl add the following lines:
 	$eprint->set_value("fp7_type", $mapped_type)
 
 
+In file cdf/cfg.d/eprints_field_default.pl add this line:
+
+	$data->{fp7_project} = "no";
 
 In file cfg/workflows/eprint/default.xml add the following lines before the closing </workflow> tag:
 
 ```html
 <stage name="openaire">
-	<component type="Field::Multi">
+	<component show_help="always" type="Field::Multi">
 		<title>Details for EU project outputs</title>`
-		<field ref="fp7_project"/>
+		<field ref="fp7_project"  required="yes"/>
 		<field ref="fp7_project_fundingprogramme"/>
 		<field ref="fp7_project_id"/>
 		<field ref="fp7_project_name"/>

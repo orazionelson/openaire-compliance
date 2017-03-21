@@ -1,5 +1,3 @@
-$c->{oai}->{v2}->{output_plugins}->{oai_dc} = "OAI_DC_Ext";
-
 if(defined $c->{oai}->{custom_sets})
 {
 	@{ $c->{oai}->{custom_sets} } = (@{ $c->{oai}->{custom_sets} }, (
@@ -12,18 +10,8 @@ if(defined $c->{oai}->{custom_sets})
 		},
 	));
 }
-else
-{
-	my $custom_sets = {};
 
-	$custom_sets = [
-		{
-			spec => "rji_test",
-			name => "Rob Test Set no existing CS",
-			filters => [
-				{ meta_fields => ["full_text_status" ], value => "public", },
-			]
-		},
-	];
-	$c->{oai}->{custom_sets} = $custom_sets;
-}
+# don't use Export::OAI_DC for oai_dc metadataPrefix...
+$c->{plugins}->{"Export::OAI_DC"}->{params}->{metadataPrefix} = undef;
+# ...use Export::OAI_DC_Ext instead
+$c->{plugins}->{"Export::OAI_DC_Ext"}->{params}->{metadataPrefix} = "oai_dc";
