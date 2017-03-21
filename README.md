@@ -59,7 +59,7 @@ To activate the OpenAIRE compliance features you will need to make some changes 
 
 In file cfg/cfg.d/eprint_fields_automatic.pl add the following lines:
 
-
+```perl
 	# Map Eprints type to DRIVER type
 	my %type_map = (
 		"article" => "info:eu-repo/semantics/article",
@@ -72,7 +72,7 @@ In file cfg/cfg.d/eprint_fields_automatic.pl add the following lines:
 
 	my $mapped_type = (exists $type_map{$type}) ? $type_map{$type} : "info:eu-repo/semantics/other";
 	$eprint->set_value("fp7_type", $mapped_type)
-
+```
 
 In file cdf/cfg.d/eprints_field_default.pl add this line:
 
