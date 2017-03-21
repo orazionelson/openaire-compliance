@@ -71,14 +71,14 @@ In file cfg/cfg.d/eprint_fields_automatic.pl add the following lines:
 		);
 
 	my $mapped_type = (exists $type_map{$type}) ? $type_map{$type} : "info:eu-repo/semantics/other";
-	$eprint->set_value("fp7_type", $mapped_type)
+	$eprint->set_value("eu_type", $mapped_type)
 ```
 
 In file cdf/cfg.d/eprints_field_default.pl add this line:
 
 
 ```perl
-	$data->{fp7_project} = "no";
+	$data->{eu_project} = "no";
 ```
 
 In file cfg/workflows/eprint/default.xml add the following lines before the closing </workflow> tag:
@@ -87,11 +87,11 @@ In file cfg/workflows/eprint/default.xml add the following lines before the clos
 <stage name="openaire">
 	<component show_help="always" type="Field::Multi">
 		<title>Details for EU project outputs</title>`
-		<field ref="fp7_project"  required="yes"/>
-		<field ref="fp7_project_fundingprogramme"/>
-		<field ref="fp7_project_id"/>
-		<field ref="fp7_project_name"/>
-		<field ref="fp7_project_acronym"/>
+		<field ref="eu_project"  required="yes"/>
+		<field ref="eu_project_fundingprogramme"/>
+		<field ref="eu_project_id"/>
+		<field ref="eu_project_name"/>
+		<field ref="eu_project_acronym"/>
 		<field ref="access_rights"/>
 	</component>
 </stage>
