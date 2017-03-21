@@ -20,9 +20,9 @@ sub convert_dataobj
 	if( $eprint->exists_and_set( "eu_project" ) && $eprint->get_value( "eu_project" ) eq "yes" )
 	{
 		push @dcdata, [ "type", $eprint->get_value( "eu_type" ) ] if($eprint->exists_and_set( "eu_type" ));
-		#info:eu-repo/grantAgreement/EC/FP7/636983/EU//PLATINUM
-		#push @dcdata, [ "relation", "info:eu-repo/EC/".$eprint->get_value( "eu_project_fundingprogramme")."/".$eprint->get_value( "eu_project_id" )."/EU/".$eprint->get_value( "eu_project_name" )."/".$eprint->get_value( "eu_project_acronym" ) ] if($eprint->exists_and_set( "eu_project_id" ));
-		push @dcdata, [ "relation", "info:eu-repo/EC/"] if($eprint->exists_and_set( "eu_project_id" ));
+		
+		#Example: info:eu-repo/grantAgreement/EC/FP7/636983/EU//PLATINUM
+		push @dcdata, [ "relation", "info:eu-repo/grantAgreement/EC/" . $eprint->get_value( "eu_project_fundingprogramme") . "/" . $eprint->get_value( "eu_project_id" ) . "/EU/" . $eprint->get_value( "eu_project_name" ) . "/" . $eprint->get_value( "eu_project_acronym" ) ] if($eprint->exists_and_set( "eu_project_id" ));
 		
 		my $embargoed = 0;
 	    my @documents = $eprint->get_all_documents();
