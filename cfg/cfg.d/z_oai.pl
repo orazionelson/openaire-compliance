@@ -5,7 +5,7 @@ if(defined $c->{oai}->{custom_sets})
 			spec => "openaire",
 			name => "OpenAire",
 			filters => [
-				{ meta_fields => ["fp7_project" ], value => "yes", },
+				{ meta_fields => ["eu_project" ], value => "yes", },
 			]
 		},
 	));

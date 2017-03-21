@@ -14,15 +14,16 @@ sub convert_dataobj
 	my $data_ref = $self->SUPER::convert_dataobj($eprint);
 	push @dcdata, @$data_ref;
 
-	# Show extended metadata for FP7 projects
+	# Show extended metadata for EU projects
 	# Would be nice to only show this for the relevant set but I don't think that information
 	# makes it past the oai2 CGI script
-	if( $eprint->exists_and_set( "fp7_project" ) && $eprint->get_value( "fp7_project" ) eq "yes" )
+	if( $eprint->exists_and_set( "eu_project" ) && $eprint->get_value( "eu_project" ) eq "yes" )
 	{
-		push @dcdata, [ "type", $eprint->get_value( "fp7_type" ) ] if($eprint->exists_and_set( "fp7_type" ));
+		push @dcdata, [ "type", $eprint->get_value( "eu_type" ) ] if($eprint->exists_and_set( "eu_type" ));
 		#info:eu-repo/grantAgreement/EC/FP7/636983/EU//PLATINUM
-		push @dcdata, [ "relation", "info:eu-repo/EC/".$eprint->get_value( "fp7_project_fundingprogramme")."/".$eprint->get_value( "fp7_project_id" )."/EU/".$eprint->get_value( "fp7_project_name" )."/".$eprint->get_value( "fp7_project_acronym" ) ] if($eprint->exists_and_set( "fp7_project_id" ));
-
+		#push @dcdata, [ "relation", "info:eu-repo/EC/".$eprint->get_value( "eu_project_fundingprogramme")."/".$eprint->get_value( "eu_project_id" )."/EU/".$eprint->get_value( "eu_project_name" )."/".$eprint->get_value( "eu_project_acronym" ) ] if($eprint->exists_and_set( "eu_project_id" ));
+		push @dcdata, [ "relation", "info:eu-repo/EC/"] if($eprint->exists_and_set( "eu_project_id" ));
+		
 		my $embargoed = 0;
 	    my @documents = $eprint->get_all_documents();
 	    foreach ( @documents )

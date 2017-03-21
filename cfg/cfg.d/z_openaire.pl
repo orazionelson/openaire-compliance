@@ -1,7 +1,7 @@
 # Add extra metadata fields to eprints for OpenAIRE
 @{ $c->{fields}->{eprint} } = ( @{ $c->{fields}->{eprint} }, (
 	{
-	    'name' => 'fp7_project',
+	    'name' => 'eu_project',
 		'type' => 'set',
 		'options' => [
 			   'no',
@@ -10,7 +10,7 @@
 		'input_style' => 'radio',
 	},
 	{
-	    'name' => 'fp7_project_fundingprogramme',
+	    'name' => 'eu_project_fundingprogramme',
 		'type' => 'set',
 		'options' => [
 			   'FP7',
@@ -19,20 +19,20 @@
 		'input_style' => 'radio',
 	},	
 	{
-		'name' => 'fp7_project_id',
+		'name' => 'eu_project_id',
 		'type' => 'text',
 		'multiple' => 0,
 	},
 	{
-		'name' => 'fp7_project_name',
+		'name' => 'eu_project_name',
 		'type' => 'text',
 	},
 	{
-		'name' => 'fp7_project_acronym',
+		'name' => 'eu_project_acronym',
 		'type' => 'text',
 	}, 
 	{
-		'name' => 'fp7_type',
+		'name' => 'eu_type',
 		'type' => 'set',
 		'options' => [
 			'info:eu-repo/semantics/article',
