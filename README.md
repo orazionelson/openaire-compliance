@@ -76,7 +76,10 @@ In file cfg/cfg.d/eprint_fields_automatic.pl add the following lines:
 
 In file cdf/cfg.d/eprints_field_default.pl add this line:
 
+
+```perl
 	$data->{fp7_project} = "no";
+```
 
 In file cfg/workflows/eprint/default.xml add the following lines before the closing </workflow> tag:
 
@@ -95,8 +98,10 @@ In file cfg/workflows/eprint/default.xml add the following lines before the clos
 ```
 
 And add the following line to the <flow> element (near the start of the file) to place the new FP7 stage where you feelit will be most appropriate for your workflow:
-	
-	<stage ref="openaire"/>
+
+```html	
+<stage ref="openaire"/>
+```
 
 e.g.:
 
