@@ -1,4 +1,4 @@
-package EPrints::Plugin::Export::OAI_DC_Ext;
+package EPrints::Plugin::Export::OAI_DC_OPENAIRE;
 
 use base qw/ EPrints::Plugin::Export::OAI_DC /;
 
@@ -8,7 +8,7 @@ sub xml_dataobj
 {
 	my( $plugin, $dataobj ) = @_;
 
-	my $main_dc_plugin = $plugin->{session}->plugin( "Export::DC_Ext" );
+	my $main_dc_plugin = $plugin->{session}->plugin( "Export::DC_OPENAIRE" );
 	
 	my $data = $main_dc_plugin->convert_dataobj( $dataobj );
 

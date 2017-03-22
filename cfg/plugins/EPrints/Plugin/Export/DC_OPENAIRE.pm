@@ -1,4 +1,4 @@
-package EPrints::Plugin::Export::DC_Ext;
+package EPrints::Plugin::Export::DC_OPENAIRE;
 
 use base qw/ EPrints::Plugin::Export::DC /;
 
