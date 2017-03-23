@@ -163,18 +163,18 @@ this will add the new fields without editing the old ones.
 
 Change this line from:
 
-```html
+```perl
 $eprint->set_value("fp7_type", $mapped_type)
 ```
 To:
 
-```html
+```perl
 $eprint->set_value("eu_type", $mapped_type)
 ```
 
 
 4) In <b>archiveid/cfg/cfg.d/eprint_fields_default.pl</b> add:
-```html
+```perl
 $data->{eu_project} = "no";
 ```	
 
