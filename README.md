@@ -15,7 +15,7 @@ Note: this plug-in has been forked from the [openaire-compliance 0.3 version](ht
 The interface:
 ![Interface](OpenAireInterface.png)
 
-The new OAI-PMH push:
+The relative portion in OAI-PMH push:
 ```xml
 <dc:type>info:eu-repo/semantics/article</dc:type>
 <dc:relation>info:eu-repo/grantAgreement/EC/FP7/123456/EU/A sample of EU project/EUPSAM</dc:relation>
