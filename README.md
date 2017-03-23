@@ -68,7 +68,7 @@ Getting started
 To activate the OpenAIRE compliance features you will need to make some changes to your repository setup. 
 
 
-In file cfg/cfg.d/eprint_fields_automatic.pl add the following lines:
+In file <b>cfg/cfg.d/eprint_fields_automatic.pl</b> add the following lines:
 
 ```perl
 	# Map Eprints type to DRIVER type
@@ -85,14 +85,14 @@ In file cfg/cfg.d/eprint_fields_automatic.pl add the following lines:
 	$eprint->set_value("eu_type", $mapped_type)
 ```
 
-In file cdf/cfg.d/eprints_field_default.pl add this line:
+In file <b>cfg/cfg.d/eprints_field_default.pl</b> add this line:
 
 
 ```perl
 	$data->{eu_project} = "no";
 ```
 
-In file cfg/workflows/eprint/default.xml add the following lines before the closing </workflow> tag:
+In file <b><cfg/workflows/eprint/default.xml</b> add the following lines before the closing </workflow> tag:
 
 ```html
 <stage name="openaire">
