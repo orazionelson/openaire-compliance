@@ -12,7 +12,15 @@ For installation instructions see the instructions below.
 
 Note: this plug-in has been forked from the [openaire-compliance 0.3 version](https://github.com/eprintsug/openaire-compliance). It introduces the FP7/H2020 option and a user friendly way to add the metatada to build the project namespace at <i>info:eu-repo</i> 
 
+The interface:
 ![Interface](OpenAireInterface.png)
+
+The new OAI-PMH push:
+```xml
+<dc:type>info:eu-repo/semantics/article</dc:type>
+<dc:relation>info:eu-repo/grantAgreement/EC/FP7/123456/EU/A sample of EU project/EUPSAM</dc:relation>
+<dc:rights>info:eu-repo/semantics/openAccess</dc:rights>
+```
 
 What this add-on does and doesn't do
 ------------------------------------
