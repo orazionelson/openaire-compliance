@@ -58,8 +58,9 @@ Update database
 
 Add the new metadata fields to your database:
 
-cd [eprints_root]/bin
-./epadmin update_database_structure ARCHIVEID --verbose
+<blockquote>cd [eprints_root]/bin</blockquote>
+
+<blockquote>./epadmin update_database_structure ARCHIVEID --verbose</blockquote>
 
 
 Getting started
@@ -92,7 +93,7 @@ In file <b>cfg/cfg.d/eprints_field_default.pl</b> add this line:
 	$data->{eu_project} = "no";
 ```
 
-In file <b><cfg/workflows/eprint/default.xml</b> add the following lines before the closing </workflow> tag:
+In file <b>cfg/workflows/eprint/default.xml</b> add the following lines before the closing </workflow> tag:
 
 ```html
 <stage name="openaire">
@@ -148,8 +149,17 @@ ALTER TABLE  `eprint` CHANGE  `fp7_project_id`  `eu_project_id` VARCHAR( 255 ) C
 ALTER TABLE  `eprint` CHANGE  `fp7_type`  `eu_type` VARCHAR( 255 ) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL ;
 
 ```
+2) Unzip the package in you archive directory, then update your database:
 
-2) In <b>archiveid/cfg/cfg.d/eprints_field_automatic.xml</b>
+<blockquote>cd [eprints_root]/bin</blockquote>
+
+<blockquote>./epadmin update_database_structure ARCHIVEID --verbose</blockquote>
+
+this will add the new fields without editing the old ones.
+
+
+
+3) In <b>archiveid/cfg/cfg.d/eprints_field_automatic.xml</b>
 
 Change this line from:
 
@@ -163,12 +173,12 @@ $eprint->set_value("eu_type", $mapped_type)
 ```
 
 
-3) In <b>archiveid/cfg/cfg.d/eprint_fields_default.pl</b> add:
+4) In <b>archiveid/cfg/cfg.d/eprint_fields_default.pl</b> add:
 ```html
 $data->{eu_project} = "no";
 ```	
 
-4) Then in <b>archiveid/cfg/workflow/eprint/default.xml</b>
+5) Then in <b>archiveid/cfg/workflow/eprint/default.xml</b>
 Change this line from:
 ```html
 	<stage ref="fp7"/>
@@ -204,8 +214,8 @@ to:
 	</component>
 </stage>
 ```
-<blockquote style="border:4px solid red;border-radius:10px;padding:10px">
-5) Delete the old Plugin files:
+<blockquote style="border:8px solid red;border-radius:10px;padding:10px">
+6) IMPORTANT, Delete the old plugin files:
 
 <b>archiveid/cfg/plugins/EPrints/Plugin/Export/DC_Ext.pm</b>
 
@@ -213,6 +223,7 @@ and
 
 <b>archiveid/cfg/plugins/EPrints/Plugin/Export/OAI_DC_Ext.pm</b>
 </blockquote>
+
 
 Reload configuration and restart apache
 
