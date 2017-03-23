@@ -228,5 +228,11 @@ and
 Reload configuration and restart apache
 
 
+End note
+========
+
+I find that programming in PERL is slightly frustrating, I had to thank for the help in the debugging of this plugin: [jesusbagpuss](https://github.com/jesusbagpuss).
+
+
 
 
