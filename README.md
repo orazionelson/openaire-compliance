@@ -12,6 +12,8 @@ For installation instructions see the instructions below.
 
 Note: this plug-in has been forked from the [openaire-compliance 0.3 version](https://github.com/eprintsug/openaire-compliance). It introduces the FP7/H2020 option and a user friendly way to add the metatada to build the project namespace at <i>info:eu-repo</i> 
 
+![Interface](OpenAireInterface.png)
+
 What this add-on does and doesn't do
 ------------------------------------
 
@@ -117,6 +119,93 @@ e.g.:
 
 Restart apache to ensure that all the changes are applied.
 
+
+Upgrade
+=======
+
+If you have already installed the 0.3 version of plugin there are few more tricks to do for upgrading to 0.4
+
+Getting started
+---------------
+
+1) Go your archive database, from the mysql shell or phpmyadmin, and launch these queries:
+
+```sql
+
+ALTER TABLE  `eprint` CHANGE  `fp7_project`  `eu_project` VARCHAR( 255 ) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL ;
+
+ALTER TABLE  `eprint` CHANGE  `fp7_project_id`  `eu_project_id` VARCHAR( 255 ) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL ;
+
+ALTER TABLE  `eprint` CHANGE  `fp7_type`  `eu_type` VARCHAR( 255 ) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL ;
+
+```
+
+2) In <b>archiveid/cfg/cfg.d/eprints_field_automatic.xml</b>
+
+Change this line from:
+
+```html
+$eprint->set_value("fp7_type", $mapped_type)
+```
+To:
+
+```html
+$eprint->set_value("eu_type", $mapped_type)
+```
+
+
+3) In <b>archiveid/cfg/cfg.d/eprint_fields_default.pl</b> add:
+```html
+$data->{eu_project} = "no";
+```	
+
+4) Then in <b>archiveid/cfg/workflow/eprint/default.xml</b>
+Change this line from:
+```html
+	<stage ref="fp7"/>
+```    
+To:
+```html
+	<stage ref="openaire"/>
+```	
+	
+And these lines:
+```html
+  <stage name="fp7">
+    <component type="Field::Multi">
+      <title>Details for FP7 project outputs</title>
+      <field ref="fp7_project"/>
+      <field ref="fp7_project_id"/>
+      <field ref="access_rights"/>
+    </component>
+  </stage>
+```  
+to:
+
+```html
+<stage name="openaire">
+	<component show_help="always" type="Field::Multi">
+		<title>Details for EU project outputs</title>`
+		<field ref="eu_project"  required="yes"/>
+		<field ref="eu_project_fundingprogramme"/>
+		<field ref="eu_project_id"/>
+		<field ref="eu_project_name"/>
+		<field ref="eu_project_acronym"/>
+		<field ref="access_rights"/>
+	</component>
+</stage>
+```
+<blockquote style="border:4px solid red;border-radius:10px;padding:10px">
+5) Delete the old Plugin files:
+
+<b>archiveid/cfg/plugins/EPrints/Plugin/Export/DC_Ext.pm</b>
+
+and
+
+<b>archiveid/cfg/plugins/EPrints/Plugin/Export/OAI_DC_Ext.pm</b>
+</blockquote>
+
+Reload configuration and restart apache
 
 
 
