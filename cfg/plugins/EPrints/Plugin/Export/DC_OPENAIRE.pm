@@ -3,6 +3,7 @@ package EPrints::Plugin::Export::DC_OPENAIRE;
 use base qw/ EPrints::Plugin::Export::DC /;
 
 use strict;
+use Time::Piece;
 
 sub convert_dataobj
 {
@@ -25,30 +26,37 @@ sub convert_dataobj
 		push @dcdata, [ "relation", "info:eu-repo/grantAgreement/EC/" . $eprint->get_value( "eu_project_fundingprogramme") . "/" . $eprint->get_value( "eu_project_id" ) . "/EU/" . $eprint->get_value( "eu_project_name" ) . "/" . $eprint->get_value( "eu_project_acronym" ) ] if($eprint->exists_and_set( "eu_project_id" ));
 		
 		my $embargoed = 0;
-	    my @documents = $eprint->get_all_documents();
-	    foreach ( @documents )
-	    {
+		my @documents = $eprint->get_all_documents();
+		foreach ( @documents )
+		{
 			if( !$_->is_public)
 			{
-	            my $embargo = $_->get_value("date_embargo");
+				my $embargo = $_->get_value("date_embargo");
 
 				if($embargo != "")
 				{
 					$embargoed = 1;
 
-		            # EPrints embargo date may be just be a year or year/month.
-		            # Need to normalise and format as per guidelines
-	            	$embargo = $embargo . "-01-01" if (length $embargo == 4);
-	            	$embargo = $embargo . "-01" if (length $embargo == 7);
+					# EPrints embargo date may be just be a year or year/month.
+					# Need to normalise and format as per guidelines
+					if( length $embargo == 4)
+					{
+						$embargo = $embargo . "-12-31";
+					}
+					elsif( length $embargo == 7)
+					{
+						my $tp = Time::Piece->strptime( $embargo, "%Y-%m" );
+						$embargo = "$embargo-".$tp->month_last_day;
+					}
 
-		            push @dcdata, [ "date", "info:eu-repo/date/embargoEnd/" . $embargo ] ;
-	        	}
+					push @dcdata, [ "date", "info:eu-repo/date/embargoEnd/" . $embargo ] ;
+				}
 			}
-	    }
+		}
 
-	    if($embargoed)
-	    {
-	    	# Override anything set in the metadata if we have an embargo in force
+		if($embargoed)
+		{
+			# Override anything set in the metadata if we have an embargo in force
 			push @dcdata, [ "rights", "info:eu-repo/semantics/embargoedAccess" ];
 		}
 		else
