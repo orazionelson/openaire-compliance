@@ -21,7 +21,7 @@
 <epp:phrase id="eprint_fieldhelp_eu_project_id">Mandatory for EU funded resources. Format: 12345</epp:phrase>
 
 <epp:phrase id="eprint_fieldname_eu_project_name">Project Name</epp:phrase>
-<epp:phrase id="eprint_fieldhelp_eu_project_name">Mandatory, the name of the project. Use just letters and/or numbers, do not use signs(/,',",# etc..) or brackets. White spaces are allowed.</epp:phrase>
+<epp:phrase id="eprint_fieldhelp_eu_project_name">Optional, the name of the project. Use just letters and/or numbers, do not use signs(/,',",# etc..) or brackets. White spaces are allowed.</epp:phrase>
 
 <epp:phrase id="eprint_fieldname_eu_project_acronym">Project Acronym</epp:phrase>
 <epp:phrase id="eprint_fieldhelp_eu_project_acronym">Mandatory: the acronym of the project.</epp:phrase>
