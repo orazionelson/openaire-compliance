@@ -1,6 +1,9 @@
 OpenAIRE Compliance
 ===================
 
+<a href="https://zenodo.org/badge/latestdoi/85585666"><img src="https://zenodo.org/badge/85585666.svg" alt="DOI"></a>
+
+
 Version: 0.4 (Beta)
 EPrints version: 3.2+
 
