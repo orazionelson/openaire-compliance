@@ -49,7 +49,7 @@
 <epp:phrase id="eprint_fieldhelp_access_rights">Campo obbligatorio. Disponiblità della risorsa.</epp:phrase>
 <epp:phrase id="eprint_fieldopt_access_rights_info:eu-repo/semantics/openAccess">Accesso aperto</epp:phrase>
 <epp:phrase id="eprint_fieldopt_access_rights_info:eu-repo/semantics/closedAccess">Accesso chiuso</epp:phrase>
-<epp:phrase id="eprint_fieldopt_access_rights_info:eu-repo/semantics/embargoedAccess">Sottomesso a embrago</epp:phrase>
+<epp:phrase id="eprint_fieldopt_access_rights_info:eu-repo/semantics/embargoedAccess">Sottomesso a embargo</epp:phrase>
 <epp:phrase id="eprint_fieldopt_access_rights_info:eu-repo/semantics/restrictedAccess">Accesso ristretto</epp:phrase>
 
 </epp:phrases>
