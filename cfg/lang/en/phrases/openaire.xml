@@ -5,19 +5,19 @@
 
 <!-- Eprint fields -->
 <epp:phrase id="metapage_title_openaire">OpenAire</epp:phrase>
-<epp:phrase id="metapage_title_eu">EU Founded (FP7, H2020) projects</epp:phrase>
+<epp:phrase id="metapage_title_eu">EU Funded (FP7, H2020) projects</epp:phrase>
 
-<epp:phrase id="eprint_fieldname_eu_project">Output of an EU Founded project?</epp:phrase>
-<epp:phrase id="eprint_fieldhelp_eu_project">Is this item a peer-reviewed output from an EU Founded funded project?</epp:phrase>
+<epp:phrase id="eprint_fieldname_eu_project">Output of an EU Funded project?</epp:phrase>
+<epp:phrase id="eprint_fieldhelp_eu_project">Is this item a peer-reviewed output from an EU funded project?</epp:phrase>
 <epp:phrase id="eprint_fieldopt_eu_project_yes">Yes</epp:phrase>
 <epp:phrase id="eprint_fieldopt_eu_project_no">No</epp:phrase>
 
-<epp:phrase id="eprint_fieldname_eu_project_fundingprogramme">Grant Founing Programme</epp:phrase>
+<epp:phrase id="eprint_fieldname_eu_project_fundingprogramme">Grant Funding Programme</epp:phrase>
 <epp:phrase id="eprint_fieldhelp_eu_project_fundingprogramme">Mandatory, choose the funding programme: FP7 or H2020</epp:phrase>
 <epp:phrase id="eprint_fieldopt_eu_project_fundingprogramme_FP7">FP7</epp:phrase>
 <epp:phrase id="eprint_fieldopt_eu_project_fundingprogramme_H2020">H2020</epp:phrase>
 
-<epp:phrase id="eprint_fieldname_eu_project_id">EU Founded Grant Agreement Number</epp:phrase>
+<epp:phrase id="eprint_fieldname_eu_project_id">EU Funded Grant Agreement Number</epp:phrase>
 <epp:phrase id="eprint_fieldhelp_eu_project_id">Mandatory for EU funded resources. Format: 12345</epp:phrase>
 
 <epp:phrase id="eprint_fieldname_eu_project_name">Project Name</epp:phrase>
@@ -27,7 +27,7 @@
 <epp:phrase id="eprint_fieldhelp_eu_project_acronym">Mandatory: the acronym of the project.</epp:phrase>
 
 <epp:phrase id="eprint_fieldname_eu_type">Output type</epp:phrase>
-<epp:phrase id="eprint_fieldhelp_eu_type">Mandatory for EU Founded funded resources. Please select the type of output from the EU Founded mandated list</epp:phrase>
+<epp:phrase id="eprint_fieldhelp_eu_type">Mandatory for EU funded resources. Please select the type of output from the EU Funded mandated list</epp:phrase>
 <epp:phrase id="eprint_fieldopt_eu_type_info:eu-repo/semantics/article">Article</epp:phrase>
 <epp:phrase id="eprint_fieldopt_eu_type_info:eu-repo/semantics/bachelorThesis">Thesis (Bachelor)</epp:phrase>
 <epp:phrase id="eprint_fieldopt_eu_type_info:eu-repo/semantics/masterThesis">Thesis (Master)</epp:phrase>
@@ -46,7 +46,7 @@
 <epp:phrase id="eprint_fieldopt_eu_type_info:eu-repo/semantics/other">Other</epp:phrase>
 
 <epp:phrase id="eprint_fieldname_access_rights">Access rights</epp:phrase>
-<epp:phrase id="eprint_fieldhelp_access_rights">Mandatory for EU Founded funded resources. Define the availability of the resource</epp:phrase>
+<epp:phrase id="eprint_fieldhelp_access_rights">Mandatory for EU funded resources. Define the availability of the resource</epp:phrase>
 <epp:phrase id="eprint_fieldopt_access_rights_info:eu-repo/semantics/openAccess">Open access</epp:phrase>
 <epp:phrase id="eprint_fieldopt_access_rights_info:eu-repo/semantics/closedAccess">Closed access</epp:phrase>
 <epp:phrase id="eprint_fieldopt_access_rights_info:eu-repo/semantics/embargoedAccess">Embargoed access</epp:phrase>
