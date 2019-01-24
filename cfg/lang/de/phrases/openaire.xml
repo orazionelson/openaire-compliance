@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE phrases SYSTEM "entities.dtd">
+<epp:phrases xmlns="http://www.w3.org/1999/xhtml" xmlns:epp="http://eprints.org/ep3/phrase" xmlns:epc="http://eprints.org/ep3/control">
+
+
+<!-- Eprint fields -->
+<epp:phrase id="metapage_title_openaire">OpenAire</epp:phrase>
+<epp:phrase id="metapage_title_eu">EU-geförderte (FP7, H2020) Projekte</epp:phrase>
+
+<epp:phrase id="eprint_fieldname_eu_project">Ergebnis eines von der EU geförderten Projekts?</epp:phrase>
+<epp:phrase id="eprint_fieldhelp_eu_project">Handelt es sich bei diesem Eintrag um ein peer-reviewed Ergebnis eines von der EU geförderten Projekts?</epp:phrase>
+<epp:phrase id="eprint_fieldopt_eu_project_yes">Ja</epp:phrase>
+<epp:phrase id="eprint_fieldopt_eu_project_no">Nein</epp:phrase>
+
+<epp:phrase id="eprint_fieldname_eu_project_fundingprogramme">Förderprogramm</epp:phrase>
+<epp:phrase id="eprint_fieldhelp_eu_project_fundingprogramme">Obligatorisch ist die Wahl des Förderprogramms: FP7 oder H2020</epp:phrase>
+<epp:phrase id="eprint_fieldopt_eu_project_fundingprogramme_FP7">FP7</epp:phrase>
+<epp:phrase id="eprint_fieldopt_eu_project_fundingprogramme_H2020">H2020</epp:phrase>
+
+<epp:phrase id="eprint_fieldname_eu_project_id">EU Funded Grant Agreement Number</epp:phrase>
+<epp:phrase id="eprint_fieldhelp_eu_project_id">Obligatorisch für EU-geförderte Ressourcen. Format: 12345</epp:phrase>
+
+<epp:phrase id="eprint_fieldname_eu_project_name">Projektname</epp:phrase>
+<epp:phrase id="eprint_fieldhelp_eu_project_name">Optionale Angabe ist der Name des Projekts. Verwenden Sie nur Buchstaben und/oder Zahlen, keine Zeichen (/,',",", # usw.) oder Klammern. Leerzeichen sind erlaubt.</epp:phrase>
+
+<epp:phrase id="eprint_fieldname_eu_project_acronym">Projekt-Akronym</epp:phrase>
+<epp:phrase id="eprint_fieldhelp_eu_project_acronym">Obligatorisch: das Akronym des Projekts.</epp:phrase>
+
+<epp:phrase id="eprint_fieldname_eu_type">Ausgabeart</epp:phrase>
+<epp:phrase id="eprint_fieldhelp_eu_type">Obligatorisch für EU-geförderte Ressourcen. Bitte wählen Sie die Art der Ausgabe aus der vordgegebener Liste aus.</epp:phrase>
+<epp:phrase id="eprint_fieldopt_eu_type_info:eu-repo/semantics/article">Zeitschriftenartikel</epp:phrase>
+<epp:phrase id="eprint_fieldopt_eu_type_info:eu-repo/semantics/bachelorThesis">Bachelorarbeit</epp:phrase>
+<epp:phrase id="eprint_fieldopt_eu_type_info:eu-repo/semantics/masterThesis">Masterarbeit</epp:phrase>
+<epp:phrase id="eprint_fieldopt_eu_type_info:eu-repo/semantics/doctoralThesis">Dissertation</epp:phrase>
+<epp:phrase id="eprint_fieldopt_eu_type_info:eu-repo/semantics/book">Buch</epp:phrase>
+<epp:phrase id="eprint_fieldopt_eu_type_info:eu-repo/semantics/bookPart">Buchteil</epp:phrase>
+<epp:phrase id="eprint_fieldopt_eu_type_info:eu-repo/semantics/review">Rezension</epp:phrase>
+<epp:phrase id="eprint_fieldopt_eu_type_info:eu-repo/semantics/conferenceObject">Konferenzobjekt</epp:phrase>
+<epp:phrase id="eprint_fieldopt_eu_type_info:eu-repo/semantics/lecture">Vorlesung</epp:phrase>
+<epp:phrase id="eprint_fieldopt_eu_type_info:eu-repo/semantics/workingPaper">Arbeitspapier</epp:phrase>
+<epp:phrase id="eprint_fieldopt_eu_type_info:eu-repo/semantics/preprint">Preprint</epp:phrase>
+<epp:phrase id="eprint_fieldopt_eu_type_info:eu-repo/semantics/report">Bericht</epp:phrase>
+<epp:phrase id="eprint_fieldopt_eu_type_info:eu-repo/semantics/annotation">Kommentar</epp:phrase>
+<epp:phrase id="eprint_fieldopt_eu_type_info:eu-repo/semantics/contributionToPeriodical">Artikel in einer Zeitung oder Magazin</epp:phrase>
+<epp:phrase id="eprint_fieldopt_eu_type_info:eu-repo/semantics/patent">Patent</epp:phrase>
+<epp:phrase id="eprint_fieldopt_eu_type_info:eu-repo/semantics/other">Sonstiges</epp:phrase>
+
+<epp:phrase id="eprint_fieldname_access_rights">Zugriffsrechte</epp:phrase>
+<epp:phrase id="eprint_fieldhelp_access_rights">Obligatorisch für EU-geförderte Ressourcen. Definieren Sie die Verfügbarkeit der Ressource.</epp:phrase>
+<epp:phrase id="eprint_fieldopt_access_rights_info:eu-repo/semantics/openAccess">Open Access</epp:phrase>
+<epp:phrase id="eprint_fieldopt_access_rights_info:eu-repo/semantics/closedAccess">Closed Access</epp:phrase>
+<epp:phrase id="eprint_fieldopt_access_rights_info:eu-repo/semantics/embargoedAccess">Embargoed Access</epp:phrase>
+<epp:phrase id="eprint_fieldopt_access_rights_info:eu-repo/semantics/restrictedAccess">Restricted Access</epp:phrase>
+
+</epp:phrases>
